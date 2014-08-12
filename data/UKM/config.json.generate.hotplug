@@ -27,7 +27,7 @@ cat << CTAG
 				INTELLIPLUG=\`$BB cat /sys/module/intelli_plug/parameters/intelli_plug_active\`;
 					$BB echo '{ SCheckBox:{
 						label:"Enable",
-						description:"An in kernel replacement for Qualcomms MPDecision. Developed by faux123.",
+						description:"An in kernel replacement for Qualcomm's MPDecision. Developed by faux123.",
 						default:'$INTELLIPLUG',
 						action:"generic /sys/module/intelli_plug/parameters/intelli_plug_active"
 					}},'
@@ -117,7 +117,7 @@ cat << CTAG
 				INTELLIPLUG=\`$BB cat /sys/kernel/intelli_plug/intelli_plug_active\`;
 					$BB echo '{ SCheckBox:{
 						label:"Enable",
-						description:"An in kernel replacement for Qualcomms MPDecision. Developed by faux123 & neobuddy89.",
+						description:"An in kernel replacement for Qualcomm's MPDecision. Developed by faux123 & neobuddy89.",
 						default:'$INTELLIPLUG',
 						action:"generic /sys/kernel/intelli_plug/intelli_plug_active"
 					}},'
@@ -203,13 +203,13 @@ cat << CTAG
 					}},'
 				fi
 				if [ -f "/sys/kernel/intelli_plug/suspend_defer_time" ]; then
-				SDT=\`$BB cat /sys/kernel/intelli_plug/suspend_defer_time\`;
+				ISDT=\`$BB cat /sys/kernel/intelli_plug/suspend_defer_time\`;
 					$BB echo '{ SSeekBar:{
 						title:"Suspend Defer Time",
 						min:0,
 						max:10000,
 						step:10,
-						default:'$RT',
+						default:'$ISDT',
 						action:"generic /sys/kernel/intelli_plug/suspend_defer_time"
 					}},'
 				fi
@@ -304,7 +304,7 @@ cat << CTAG
 					}},
 						{ SCheckBox:{
 							label:"Enable",
-							description:"An in kernel replacement for Qualcomms MPDecision. Developed by show-p1984.",
+							description:"An in kernel replacement for Qualcomm's MPDecision. Developed by show-p1984.",
 							default:'$MSMMPD',
 							action:"generic /sys/kernel/msm_mpdecision/conf/enabled"
 						}},'
@@ -576,7 +576,7 @@ cat << CTAG
 				MSMHOT=\`$BB cat /sys/module/msm_hotplug/enabled\`
 						$BB echo '{ SCheckBox:{
 							label:"Enable",
-							description:"An in kernel replacement for Qualcomms MPDecision. Developed by myfluxi.",
+							description:"An in kernel replacement for Qualcomm's MPDecision. Developed by myfluxi.",
 							default:'$MSMHOT',
 							action:"generic /sys/module/msm_hotplug/enabled"
 						}},'
@@ -585,7 +585,7 @@ cat << CTAG
 				MSMEN=\`$BB cat /sys/module/msm_hotplug/msm_enabled\`
 						$BB echo '{ SCheckBox:{
 							label:"Enable",
-							description:"An in kernel replacement for Qualcomms MPDecision. Developed by myfluxi.",
+							description:"An in kernel replacement for Qualcomm's MPDecision. Developed by myfluxi.",
 							default:'$MSMEN',
 							action:"generic /sys/module/msm_hotplug/msm_enabled"
 						}},'
@@ -799,7 +799,7 @@ cat << CTAG
 			`if [ -d "/sys/module/auto_hotplug/parameters" ]; then
 				$BB echo '{ SPane:{
 					title:"Auto Hotplug",
-					description:"An in kernel replacement for Qualcomms MPDecision. Developed by Thalamus.",
+					description:"An in kernel replacement for Qualcomm's MPDecision. Developed by Thalamus.",
 				}},'
 				if [ -f "/sys/module/auto_hotplug/parameters/disable_load_threshold" ]; then
 				DLT=\`$BB cat /sys/module/auto_hotplug/parameters/disable_load_threshold\`
@@ -899,7 +899,7 @@ cat << CTAG
 					}},
 						{ SCheckBox:{
 							label:"Enable",
-							description:"An in kernel replacement for Qualcomms MPDecision. Developed by stratosk.",
+							description:"An in kernel replacement for Qualcomm's MPDecision. Developed by stratosk.",
 							default:'$DYNHOT',
 							action:"boolean /sys/module/dyn_hotplug/parameters/enabled"
 						}},'
@@ -980,7 +980,7 @@ cat << CTAG
 				HOTENABLE=\`$BB cat sys/kernel/alucard_hotplug/hotplug_enable\`
 					$BB echo '{ SCheckBox:{
 						label:"Enable",
-						description:"An in kernel replacement for Qualcomms MPDecision. Developed by Alucard.",
+						description:"An in kernel replacement for Qualcomm's MPDecision. Developed by Alucard.",
 						default:'$HOTENABLE',
 						action:"generic sys/kernel/alucard_hotplug/hotplug_enable"
 					}},'
@@ -1269,7 +1269,7 @@ cat << CTAG
 				if [ -n "$MHC" ]; then
 					$BB echo '{ SPane:{
 						title:"Mako Hotplug Control"
-						description:"An in kernel replacement for Qualcomms MPDecision. Developed by franciscofranco.",
+						description:"An in kernel replacement for Qualcomm's MPDecision. Developed by franciscofranco.",
 					}},'
 				fi;
 				if [ -f "$MHC/cores_on_touch" ]; then
@@ -1333,7 +1333,7 @@ cat << CTAG
 				CPUBOOST=\`$BB cat /sys/module/cpu_boost/parameters/cpu_boost\`;
 					$BB echo '{ SCheckBox:{
 						label:"Enable",
-						description:"An in kernel replacement for Qualcomms MPDecision. Developed by Cyanogenmod.",
+						description:"An in kernel replacement for Qualcomm's MPDecision. Developed by Cyanogenmod.",
 						default:'$CPUBOOST',
 						action:"generic /sys/module/cpu_boost/parameters/cpu_boost"
 					}},'
@@ -1452,7 +1452,7 @@ cat << CTAG
 					}},
 						{ SCheckBox:{
 							label:"Enable",
-							description:"An in kernel replacement for Qualcomms MPDecision. Developed by mrg666.",
+							description:"An in kernel replacement for Qualcomm's MPDecision. Developed by mrg666.",
 							default:'$AUTOSMP',
 							action:"boolean /sys/module/autosmp/parameters/enabled"
 						}},'
